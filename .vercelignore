@@ -1,0 +1,13 @@
+
+# Ignore all files except the ones needed for the static site
+# Since the entire repo is the static site, we ignore common development files
+
+.git
+.gitignore
+.DS_Store
+node_modules
+npm-debug.log
+yarn-error.log
+.env
+.env.local
+.vscode

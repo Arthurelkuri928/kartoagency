@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Alterações de Cor</title>
+    <link rel="stylesheet" href="wp-content/uploads/elementor/css/post-7.css">
+    <link rel="stylesheet" href="wp-content/uploads/elementor/css/post-14570.css">
+    <style>
+        body {
+            background-color: #181D27; /* Cor primária do kit, que é um cinza escuro/preto */
+            color: white;
+            font-family: sans-serif;
+            padding: 50px;
+        }
+        .hero-section-mock {
+            width: 80%;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+            border-radius: 15px;
+            /* Simular o efeito de brilho/degradê usando a variável global modificada */
+            background: radial-gradient(circle at top, var(--e-global-color-secondary) 0%, rgba(0,0,0,0) 70%);
+            box-shadow: 0 0 50px rgba(255, 140, 0, 0.5); /* Sombra laranja para simular o brilho */
+        }
+        .test-button {
+            /* Usar as variáveis de degradê do botão que foram modificadas em post-14570.css */
+            --gradient-color-1: #FFA500;
+            --gradient-color-2: #FF8C00;
+            background-image: linear-gradient(90deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .color-test {
+            color: var(--e-global-color-secondary);
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Cores Modificadas</h1>
+    <div class="hero-section-mock">
+        <h2>Seção Hero com Novo Brilho</h2>
+        <p>O efeito de brilho (degradê) que era roxo deve estar laranja.</p>
+        <a href="#" class="test-button">Botão com Novo Degradê</a>
+        <p class="color-test">Esta cor deve ser laranja: var(--e-global-color-secondary)</p>
+    </div>
+</body>
+</html>
